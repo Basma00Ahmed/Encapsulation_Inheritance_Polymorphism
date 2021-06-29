@@ -2,14 +2,14 @@
 
 namespace Encapsulation
 {
-    public class Person : IPersonHandler
+    public class Person
     {
         private int age;
         private string fName;
         private string lName;
         private double height;
         private double weight;
-    
+
         //1 Q: Access to private attributes indirect through public properties
         public int Age
         {
@@ -93,53 +93,19 @@ namespace Encapsulation
         }
         public Person(string fname, string lname, int age, double height, double weight)
         {
-      
-                FName = fname;
-                LName = lname;
-                Age = age;
-                Height = height;
-                Weight = weight;
-         
-        }
-        public Person(Person person)
-        {
-            FName = person.FName;
-            LName = person.LName;
-            Age = person.Age;
-            Height = person.Height;
-            Weight = person.Weight;
-        }
-        public void SetAge(Person pers, int age)
-        {
-            pers.Age = age;
-        }
-        public Person CreatePerson(string fname, string lname,int age,  double height, double weight)
-        {
-            Person person = new Person(fname, lname, age, height, weight);
-            return person;
+
+            FName = fname;
+            LName = lname;
+            Age = age;
+            Height = height;
+            Weight = weight;
 
         }
-        public void SetFirstName(Person pers, string fName)
-        {
-            pers.FName = fName;
-        }
-        public void SetLastName(Person pers, string lName)
-        {
-            pers.LName = lName;
-        }
-        public void SetHeight(Person pers, double height)
-        {
-            pers.Height = height;
-        }
-        public void SetWeight(Person pers, double weight)
-        {
-            pers.Weight= weight;
-        }
-
         public override string ToString()
         {
             return $"First Name: {FName}  || Last Name: {LName}  || Age:{Age} || Height: {Height} CM|| Weight:{Weight} KG ";
-        } 
-
+        }
     }
+
+       
 }
