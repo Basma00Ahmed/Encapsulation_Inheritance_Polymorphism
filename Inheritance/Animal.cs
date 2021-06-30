@@ -5,7 +5,7 @@ using System.Text;
 namespace Inheritance
 {
 
-        public abstract class Animal
+    public abstract class Animal
     {
         /// <summary>
         ///  ///14 Q: To add a new attribute for all animals we will add it here .
@@ -38,8 +38,10 @@ namespace Inheritance
         public string Breed
         {
             get => breed;
-            set => breed = string.IsNullOrEmpty(breed) ? "Unknown Breed" : value;
+            set => breed = string.IsNullOrEmpty(value) ? "Unknown Breed" : value;
+
         }
+   
 
         public override string DoSound() => "Neigh Neigh Neigh";
         public Horse(string name, double weight, int age, bool hasbackbone, string breed) : base(name, weight, age, hasbackbone)
@@ -152,7 +154,7 @@ namespace Inheritance
         public string EarsShape
         {
             get => earsshape;
-            set => earsshape = string.IsNullOrEmpty(earsshape) ? "Unknown Ears Shape" : value;
+            set => earsshape = string.IsNullOrEmpty(value) ? "Unknown Ears Shape" : value;
         }
         public override string DoSound() => "Owooooah Owooooah";
         public Wolf(string name, double weight, int age, bool hasbackbone, string earsshape) : base(name, weight, age, hasbackbone)
